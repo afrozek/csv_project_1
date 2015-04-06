@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  h1= title
+  div
+    table
+      thead
+        tr 
+          th  Unique identification number of the institution
+          th  Institution (entity) name
+          th  Street address or post office box
+          th  City location of institution
+          th  State abbreviation
+          th  ZIP code
+          th  Details
+      tbody
+        each school, i in schools
+          tr
+            td=school.UNITID
+            td=school.INSTNM
+            td=school.ADDR
+            td=school.CITY
+            td=school.STABBR
+            td=school.ZIP
+            td
+              a(href='/schools/' + school.UNITID , name=school.UNITID) Details for #{school.INSTNM}

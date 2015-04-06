@@ -1,0 +1,143 @@
+extends layout
+
+block content
+  h1= title
+  div
+    table
+      thead
+        tr 
+          th  Unique identification number of the institution
+          th  Institution (entity) name
+          th  Street address or post office box
+          th  City location of institution
+          th  State abbreviation
+          th  ZIP code
+          th  FIPS state code
+          th  Geographic region
+          th  Name of chief administrator
+          th  Title of chief administrator
+          th  General information telephone number
+          th  Fax number
+          th  Employer Identification Number
+          th  Office of Postsecondary Education (OPE) ID Number
+          th  OPE Title IV eligibility indicator code
+          th  Institution s internet website address
+          th  Admissions office web address
+          th  Financial aid office web address
+          th  Online application web address
+          th  Net price calculator web address
+          th  Sector of institution
+          th  Level of institution
+          th  Control of institution
+          th  Highest level of offering
+          th  Undergraduate offering
+          th  Graduate offering
+          th  Highest degree offered
+          th  Degree-granting status
+          th  Historically Black College or University
+          th  Institution has hospital
+          th  Institution grants a medical degree
+          th  Tribal college
+          th  Degree of urbanization (Urban-centric locale)
+          th  Institution open to the general public
+          th  Status of institution
+          th  UNITID for merged schools
+          th  Year institution was deleted from IPEDS
+          th  Date institution closed
+          th  Institution is active in current year
+          th  Primarily postsecondary indicator
+          th  Postsecondary institution indicator
+          th  Postsecondary and Title IV institution indicator
+          th  Reporting method for student charges, graduation rates, retention rates and student financial aid
+          th  Institution name alias
+          th  Institutional category
+          th  Carnegie Classification 2010: Basic
+          th  Carnegie Classification 2010: Undergraduate Instructional Program
+          th  Carnegie Classification 2010: Graduate Instructional Program
+          th  Carnegie Classification 2010: Undergraduate Profile
+          th  Carnegie Classification 2010: Enrollment Profile
+          th  Carnegie Classification 2010: Size and Setting
+          th  Carnegie Classification 2000
+          th  Land Grant Institution
+          th  Institution size category
+          th  Core Based Statistical Area (CBSA)
+          th  CBSA Type Metropolitan or Micropolitan
+          th  Combined Statistical Area (CSA)
+          th  New England City and Town Area (NECTA)
+          th  Multi-institution or multi-campus organization
+          th  Name of multi-institution or multi-campus organization
+          th  Identification number of multi-institution or multi-campus organization
+          th  Fips County code
+          th  County name
+          th  Congressional district code
+          th  Longitude location of institution
+          th  Latitude location of institution
+      tbody
+        each school, i in schools
+          tr
+            td=school.UNITID
+            td=school.INSTNM
+            td=school.ADDR
+            td=school.CITY
+            td=school.STABBR
+            td=school.ZIP
+            td=school.FIPS
+            td=school.OBEREG
+            td=school.CHFNM
+            td=school.CHFTITLE
+            td=school.GENTELE
+            td=school.FAXTELE
+            td=school.EIN
+            td=school.OPEID
+            td=school.OPEFLAG
+            td=school.WEBADDR
+            td=school.ADMINURL
+            td=school.FAIDURL
+            td=school.APPLURL
+            td=school.NPRICURL
+            td=school.SECTOR
+            td=school.ICLEVEL
+            td=school.CONTROL
+            td=school.HLOFFER
+            td=school.UGOFFER
+            td=school.GROFFER
+            td=school.HDEGOFR1
+            td=school.DEGGRANT
+            td=school.HBCU
+            td=school.HOSPITAL
+            td=school.MEDICAL
+            td=school.TRIBAL
+            td=school.LOCALE
+            td=school.OPENPUBL
+            td=school.ACT
+            td=school.NEWID
+            td=school.DEATHYR
+            td=school.CLOSEDAT
+            td=school.CYACTIVE
+            td=school.POSTSEC
+            td=school.PSEFLAG
+            td=school.PSET4FLG
+            td=school.RPTMTH
+            td=school.IALIAS
+            td=school.INSTCAT
+            td=school.CCBASIC
+            td=school.CCIPUG
+            td=school.CCIPGRAD
+            td=school.CCUGPROF
+            td=school.CCENRPRF
+            td=school.CCSIZSET
+            td=school.CARNEGIE
+            td=school.LANDGRNT
+            td=school.INSTSIZE
+            td=school.CBSA
+            td=school.CBSATYPE
+            td=school.CSA
+            td=school.NECTA
+            td=school.F1SYSTYP
+            td=school.F1SYSNAM
+            td=school.F1SYSCOD
+            td=school.COUNTYCD
+            td=school.COUNTYNM
+            td=school.CNGDSTCD
+            td=school.LONGITUD
+            td=school.LATITUDE

@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    form#uploadForm(enctype='multipart/form-data', action='/upload', method='post')
+      input(type='file', name='filename')
+      input(type='submit', value='Upload CSV', name='submit')
+
+
